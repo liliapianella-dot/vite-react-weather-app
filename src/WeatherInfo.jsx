@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
       </h1>
       <ul>
         <li>
-          <DateSentence today={props.info} />
+          <DateSentence time={props.info} />
         </li>
         <li> {props.info.description}</li>
       </ul>
@@ -18,11 +18,6 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div>
             <WeatherIcon weatherDescription={props.info.icon} />
-            {/* <img
-              src={props.info.icon_url}
-              className="float-start"
-              alt="Clear with periodic clouds"
-            /> */}
             <span className="temperature">{props.info.temperature}</span>{" "}
             <span className="unit">°C〡°F</span>
           </div>

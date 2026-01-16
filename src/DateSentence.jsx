@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function DateSentence(props) {
-  let currentDate = props.today.currentDate;
+  let currentDate = props.time.currentDate;
   let day = currentDate.getDay();
   let hour = currentDate.getHours();
   let minutes = currentDate.getMinutes();
