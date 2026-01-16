@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Weather.css";
+import DateSentence from "./DateSentence.jsx";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -8,16 +9,20 @@ export default function Weather(props) {
 
   function handleResponse(response) {
     console.log(response);
+    console.log(new Date(response.data.time * 1000));
     setweatherData({
       cityName: response.data.city,
       countryName: response.data.country,
+      currentDate: new Date(response.data.time * 1000),
+      currentDay: new Date(response.data.time * 1000).getDay(),
+      currentHour: new Date(response.data.time * 1000).getHours(),
+      currentMinutes: new Date(response.data.time * 1000).getMinutes(),
       temperature: Math.round(response.data.temperature.current),
       description: response.data.condition.description,
       icon_url: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       humidity: response.data.temperature.humidity,
       windSpeed: response.data.wind.speed,
     });
-
     setReady(true);
   }
 
@@ -47,7 +52,13 @@ export default function Weather(props) {
           {weatherData.cityName}, {weatherData.countryName}
         </h1>
         <ul>
-          <li>Tuesday 07:00</li>
+          <li>
+            <DateSentence
+              day={weatherData.currentDay}
+              hour={weatherData.currentHour}
+              minutes={weatherData.currentMinutes}
+            />
+          </li>
           <li> {weatherData.description}</li>
         </ul>
         <div className="row mt-3">
@@ -66,7 +77,7 @@ export default function Weather(props) {
           </div>
           <div className="col-6">
             <ul>
-              <li>Humidity: {weatherData.humidity} %</li>
+              <li>Humidity: {weatherData.humidity}%</li>
               <li>Wind: {weatherData.windSpeed} km/h </li>
             </ul>
           </div>
