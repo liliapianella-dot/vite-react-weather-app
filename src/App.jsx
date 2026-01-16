@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Weather from "./Weather.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
@@ -8,7 +9,8 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <a className="btn btn-primary">button</a>
+        <Weather />
+
         <footer>
           This project is created by{" "}
           <a href="https://www.liliapianella.com/" target="_blank">
