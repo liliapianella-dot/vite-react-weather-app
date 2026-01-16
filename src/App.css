@@ -5,6 +5,9 @@
 
 .App footer {
   font-size: 11px;
-  margin: 10px 0;
+  margin: 5px 0;
   text-align: center;
+}
+.App footer a {
+  color: rgb(108, 117, 125);
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherInfo.css";
 import DateSentence from "./DateSentence.jsx";
 import WeatherIcon from "./WeatherIcon.jsx";
 import WeatherCurrentTemperature from "./WeatherCurrentTemperature.jsx";
@@ -16,13 +17,16 @@ export default function WeatherInfo(props) {
         <li> {props.info.description}</li>
       </ul>
       <div className="row mt-3">
-        <div className="col-6">
-          <div>
-            <WeatherIcon weatherDescription={props.info.icon} />
+        <div className="col-7">
+          <div className="descritionTemperatureToday">
+            <WeatherIcon
+              weatherDescription={props.info.icon}
+              className="weatherIcon"
+            />
             <WeatherCurrentTemperature celsius={props.info.temperature} />
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-5 humidityAndWind">
           <ul>
             <li>Humidity: {props.info.humidity}%</li>
             <li>Wind: {props.info.windSpeed} km/h </li>

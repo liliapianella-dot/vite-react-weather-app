@@ -21,7 +21,7 @@ export default function DateSentence(props) {
   }
   return (
     <div>
-      {day} {hour}:{minutes}
+      {day} {hour}:{minutes} (CET)
     </div>
   );
 }

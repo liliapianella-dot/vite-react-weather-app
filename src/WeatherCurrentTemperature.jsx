@@ -17,8 +17,12 @@ export default function WeatherCurrentTemperature(props) {
       <div>
         <span className="temperature">{props.celsius}</span>{" "}
         <span className="unit">
-          °C〡{" "}
-          <a href="/" onClick={showFahrenheit}>
+          °C〡
+          <a
+            href="/"
+            onClick={showFahrenheit}
+            className="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+          >
             °F
           </a>
         </span>
@@ -26,17 +30,21 @@ export default function WeatherCurrentTemperature(props) {
     );
   else {
     return (
-      <div>
+      <span>
         <span className="temperature">
           {Math.round((props.celsius * 9) / 5 + 32)}
         </span>{" "}
         <span className="unit">
-          <a href="/" onClick={showCelsius}>
+          °F〡
+          <a
+            href="/"
+            onClick={showCelsius}
+            className="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+          >
             °C{" "}
           </a>
-          〡 °F
         </span>
-      </div>
+      </span>
     );
   }
 }
