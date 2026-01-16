@@ -27,7 +27,9 @@ export default function WeatherCurrentTemperature(props) {
   else {
     return (
       <div>
-        <span className="temperature">{(props.celsius * 9) / 5 + 32}</span>{" "}
+        <span className="temperature">
+          {Math.round((props.celsius * 9) / 5 + 32)}
+        </span>{" "}
         <span className="unit">
           <a href="/" onClick={showCelsius}>
             °C{" "}
