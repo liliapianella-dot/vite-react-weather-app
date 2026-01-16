@@ -15,6 +15,7 @@ export default function Weather(props) {
       currentDate: new Date(response.data.time * 1000),
       temperature: Math.round(response.data.temperature.current),
       description: response.data.condition.description,
+      icon: response.data.condition.icon,
       icon_url: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       humidity: response.data.temperature.humidity,
       windSpeed: response.data.wind.speed,
