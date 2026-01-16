@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function DateSentence(props) {
+  let currentDate = props.today.currentDate;
+  let day = currentDate.getDay();
+  let hour = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -11,9 +15,7 @@ export default function DateSentence(props) {
     "Saturday",
     "Sunday",
   ];
-  let day = days[props.day];
-  let hour = props.hour;
-  let minutes = props.minutes;
+  day = days[day];
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
