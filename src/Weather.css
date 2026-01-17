@@ -1,7 +1,9 @@
 .Weather form {
   margin-bottom: 20px;
 }
-
+.Weather form .col-9 {
+  padding-right: 0 !important;
+}
 .Weather .button-search {
   background: #fbe856;
   transition: all 200ms ease-in-out;
@@ -10,6 +12,7 @@
   background: #2f2a7c;
   color: #f5f5f9;
 }
+
 .Weather h1 {
   color: #f7db0e;
   display: block;
@@ -48,4 +51,24 @@
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
+}
+
+@media (width<800px) {
+  .Weather form .row {
+    margin: 0 !important;
+  }
+  .Weather form .col-3 {
+    padding: 0 !important;
+  }
+  .Weather form .col-9 {
+    padding: 0 8px !important;
+  }
+  .Weather .temperature {
+    font-size: 44px;
+    line-height: 64px;
+  }
+  .Weather .unit {
+    font-size: 10px;
+    line-height: 64px;
+  }
 }

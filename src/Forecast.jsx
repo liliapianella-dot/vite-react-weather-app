@@ -30,8 +30,8 @@ export default function Forecast(props) {
           {forecast.map(function (forecast, index) {
             if (index < 5) {
               return (
-                <div className="col">
-                  <ForecastDay forecast={forecast} key={index} />
+                <div className="col text-center py-2" key={index}>
+                  <ForecastDay forecast={forecast} />
                 </div>
               );
             }

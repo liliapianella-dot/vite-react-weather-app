@@ -9,6 +9,11 @@
   justify-content: center;
 }
 .WeatherInfo {
-  padding: 20px 0;
+  padding: 20px 0 12px;
   border-top: 1px solid rgb(251, 232, 86);
+}
+@media (width<800px) {
+  .WeatherInfo .humidityAndWind li {
+    font-size: 12px;
+  }
 }
