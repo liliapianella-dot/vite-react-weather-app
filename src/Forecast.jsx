@@ -12,7 +12,6 @@ export default function Forecast(props) {
   }, [props.city]);
 
   function findForecast(response) {
-    console.log(response);
     setForecast(response.data.daily);
     setLoad("true");
   }
@@ -34,6 +33,8 @@ export default function Forecast(props) {
                   <ForecastDay forecast={forecast} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
