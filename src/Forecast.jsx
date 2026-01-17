@@ -9,13 +9,7 @@ export default function Forecast(props) {
 
   function findForecast(response) {
     console.log(response);
-    setForecast({
-      minimumTemp: Math.round(response.data.daily[0].temperature.minimum),
-      maximumTemp: Math.round(response.data.daily[0].temperature.maximum),
-      description: response.data.daily[0].condition.description,
-      icon: response.data.daily[0].condition.icon,
-      icon_url: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.daily[0].condition.icon}.png`,
-    });
+    setForecast(response.data.daily);
     setLoad("true");
   }
   function searchForecast() {
@@ -30,7 +24,19 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="row">
           <div className="col text-center">
-            <ForecastDay forecast={forecast} />
+            <ForecastDay forecast={forecast[0]} />
+          </div>
+          <div className="col text-center">
+            <ForecastDay forecast={forecast[1]} />
+          </div>
+          <div className="col text-center">
+            <ForecastDay forecast={forecast[2]} />
+          </div>
+          <div className="col text-center">
+            <ForecastDay forecast={forecast[3]} />
+          </div>
+          <div className="col text-center">
+            <ForecastDay forecast={forecast[4]} />
           </div>
         </div>
       </div>
