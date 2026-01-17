@@ -28,8 +28,8 @@ export default function WeatherIcon(props) {
   return (
     <WeatherSvg
       state={codeMapping[props.weatherDescription]}
-      width={64}
-      height={64}
+      width={props.size}
+      height={props.size}
     />
   );
 }

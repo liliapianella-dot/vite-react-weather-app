@@ -1,0 +1,10 @@
+.Forecast .unitExpressed {
+  font-size: 10px;
+  position: relative;
+  top: -4px;
+  line-height: 1;
+}
+
+.Forecast .dayDescription {
+  font-size: 12px;
+}

@@ -23,5 +23,8 @@
   border-top: 1px solid rgb(251, 232, 86);
 }
 .App footer a {
+  color: rgb(47, 42, 124);
+}
+.App footer a:visited {
   color: #f7db0e;
 }
