@@ -70,7 +70,7 @@ export default function Weather(props) {
     search();
     return (
       <div className="Weather">
-        {form} <div>Loading details for {citySearched}</div>
+        {form} <div className="pt-3">Loading details for {citySearched}</div>
       </div>
     );
   }

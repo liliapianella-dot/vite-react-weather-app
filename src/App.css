@@ -1,13 +1,27 @@
 .App {
   max-width: 600px;
   margin: 100px auto 0;
+  border: 1px solid #dadde1;
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  padding: 30px 30px 5px;
+  border-radius: 10px;
+  background: #f5f5f9;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+
+  /* #F5F4F9  #878787*/
+  /* #FBE856 */
 }
 
 .App footer {
   font-size: 11px;
-  margin: 5px 0;
+  color: #212121;
+  opacity: 0.8;
+  margin: 20px 0 0;
+  padding: 15px 0;
   text-align: center;
+  border-top: 1px solid rgb(251, 232, 86);
 }
 .App footer a {
-  color: rgb(108, 117, 125);
+  color: #f7db0e;
 }

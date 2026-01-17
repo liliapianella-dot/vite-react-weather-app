@@ -17,7 +17,7 @@ export default function WeatherCurrentTemperature(props) {
       <div>
         <span className="temperature">{props.celsius}</span>{" "}
         <span className="unit">
-          °C〡
+          °C <span className="text-body-tertiary">〡</span>
           <a
             href="/"
             onClick={showFahrenheit}
@@ -35,7 +35,7 @@ export default function WeatherCurrentTemperature(props) {
           {Math.round((props.celsius * 9) / 5 + 32)}
         </span>{" "}
         <span className="unit">
-          °F〡
+          °F <span className="text-body-tertiary">〡</span>
           <a
             href="/"
             onClick={showCelsius}

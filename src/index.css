@@ -1,1 +1,14 @@
-
+:root {
+  background: linear-gradient(
+    90deg,
+    rgb(86, 204, 251) 0.2%,
+    rgb(47, 42, 124) 100.2%
+  );
+}
+#root {
+  background: linear-gradient(
+    90deg,
+    rgb(86, 204, 251) 0.2%,
+    rgb(47, 42, 124) 100.2%
+  );
+}
