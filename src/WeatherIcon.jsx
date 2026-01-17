@@ -7,12 +7,12 @@ export default function WeatherIcon(props) {
     "clear-sky-night": "clear-night",
 
     "few-clouds-day": "partlycloudy",
-    "few-clouds-night": "partlycloudy",
-    "scattered-clouds-day": "partlycloudy",
-    "scattered-clouds-night": "partlycloudy",
+    "few-clouds-night": "cloudy",
+    "scattered-clouds-day": "cloudy",
+    "scattered-clouds-night": "cloudy",
 
     "broken-clouds-day": "partlycloudy",
-    "broken-clouds-night": "partlycloudy",
+    "broken-clouds-night": "cloudy",
     "shower-rain-day": "pouring",
     "shower-rain-night": "pouring",
     "rain-day": "rainy",
