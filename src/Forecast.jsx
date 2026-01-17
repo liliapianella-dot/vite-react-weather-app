@@ -27,7 +27,26 @@ export default function Forecast(props) {
     return (
       <div className="Forecast">
         <div className="row">
-          <div className="col text-center">
+          {forecast.map(function (forecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col">
+                  <ForecastDay forecast={forecast} key={index} />
+                </div>
+              );
+            }
+          })}
+        </div>
+      </div>
+    );
+  } else {
+    searchForecast();
+    return null;
+  }
+}
+
+/*As an alternative to the map:
+           <div className="col text-center">
             <ForecastDay forecast={forecast[0]} />
           </div>
           <div className="col text-center">
@@ -41,12 +60,4 @@ export default function Forecast(props) {
           </div>
           <div className="col text-center">
             <ForecastDay forecast={forecast[4]} />
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    searchForecast();
-    return null;
-  }
-}
+          </div> */
