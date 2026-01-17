@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Weather from "./Weather.jsx";
-import Forecat from "./Forecast.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
@@ -12,7 +11,6 @@ export default function App() {
       <div className="container">
         <div>
           <Weather city="Berlin" />
-          <Forecast city="Berlin" />
 
           <footer>
             This project is created by{" "}
